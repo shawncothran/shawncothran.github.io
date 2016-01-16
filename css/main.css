@@ -532,9 +532,9 @@ h1 {
   text-align: center; }
   .work .projectDiv:last-child {
     margin-right: 0; }
-  .work .projectDiv:last-of-type {
+  .work .projectDiv:nth-of-type(1n+1) {
     margin-top: 7vw; }
-  @media screen and (min-width: 500px) {
+  @media screen and (min-width: 800px) {
     .work .projectDiv {
       float: left;
       display: block;
@@ -543,8 +543,12 @@ h1 {
       height: 32.4vw; }
       .work .projectDiv:last-child {
         margin-right: 0; }
-      .work .projectDiv:last-of-type {
-        margin-top: 0vw; } }
+      .work .projectDiv:nth-child(3n) {
+        margin-right: 0; }
+      .work .projectDiv:nth-child(3n+1) {
+        clear: left; }
+      .work .projectDiv:nth-of-type(1n+3) {
+        margin-top: 2vw; } }
 
 .work .projectAnchor {
   color: white;
@@ -562,16 +566,18 @@ h1 {
   width: 100%;
   text-shadow: 0.1vw 0.1vw 0.5vw #fff307;
   text-transform: uppercase; }
-  @media screen and (min-width: 500px) {
+  @media screen and (min-width: 800px) {
     .work .projectAnchor {
       line-height: 32.21vw;
       font-size: 3vw; } }
 
 .work .space {
-  background: url(/assets/spaceinvaders.jpg);
+  background: url(/assets/spaceinvaders.jpg) no-repeat center center;
+  background-size: cover;
   position: relative; }
   .work .space::after {
-    background: url(/assets/spacecode.png);
+    background: url(/assets/spacecode.png) no-repeat;
+    background-size: 200%;
     bottom: 0;
     content: "";
     opacity: 0;
@@ -586,10 +592,12 @@ h1 {
     transition: opacity ease 500ms; }
 
 .work .snail {
-  background: url(/assets/snailephant.jpg);
+  background: url(/assets/snailephant.jpg) no-repeat center center;
+  background-size: cover;
   position: relative; }
   .work .snail::after {
-    background: url(/assets/snailcode.png);
+    background: url(/assets/snailcode.png) no-repeat;
+    background-size: 200%;
     bottom: 0;
     content: "";
     opacity: 0;
@@ -600,6 +608,46 @@ h1 {
     transition: opacity ease 500ms;
     z-index: 1; }
   .work .snail:hover::after {
+    opacity: 1;
+    transition: opacity ease 500ms; }
+
+.work .calc {
+  background: url(/assets/calculator.gif) no-repeat center center;
+  background-size: cover;
+  position: relative; }
+  .work .calc::after {
+    background: url(/assets/calccode.png) no-repeat;
+    background-size: 200%;
+    bottom: 0;
+    content: "";
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    transition: opacity ease 500ms;
+    z-index: 1; }
+  .work .calc:hover::after {
+    opacity: 1;
+    transition: opacity ease 500ms; }
+
+.work .skate {
+  background: url(/assets/powellperalta.jpg) no-repeat center center;
+  background-size: cover;
+  position: relative; }
+  .work .skate::after {
+    background: url(/assets/skatecode.png) no-repeat;
+    background-size: 200%;
+    bottom: 0;
+    content: "";
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    transition: opacity ease 500ms;
+    z-index: 1; }
+  .work .skate:hover::after {
     opacity: 1;
     transition: opacity ease 500ms; }
 
