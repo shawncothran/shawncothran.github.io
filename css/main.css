@@ -572,3 +572,7 @@ nav {
 a:hover > .linkContent {
   opacity: 1;
   transition: opacity ease 500ms; }
+
+.pdf {
+  height: 70.5vmin;
+  width: 63vmin; }
