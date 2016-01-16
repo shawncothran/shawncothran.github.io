@@ -511,7 +511,7 @@ h1 {
     display: inline-block;
     margin: 2rem; }
   .section button {
-    margin: 0 auto;
+    margin: 0 auto 9vw auto;
     display: block;
     color: white;
     border: 0.2rem solid #05b698;
