@@ -510,12 +510,98 @@ h1 {
   .section a {
     display: inline-block;
     margin: 2rem; }
+  .section button {
+    margin: 0 auto;
+    display: block;
+    color: white;
+    border: 0.2rem solid #05b698;
+    background: #00705d;
+    font-size: 3rem;
+    padding: 1rem; }
 
 .contact {
   margin: 2rem 0 0 0; }
 
-.bio {
-  margin: 2rem 0 0 0; }
+.work .projectDiv {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  border: 0.2rem solid #05b698;
+  height: 100vw;
+  text-align: center; }
+  .work .projectDiv:last-child {
+    margin-right: 0; }
+  .work .projectDiv:last-of-type {
+    margin-top: 7vw; }
+  @media screen and (min-width: 500px) {
+    .work .projectDiv {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      height: 32.4vw; }
+      .work .projectDiv:last-child {
+        margin-right: 0; }
+      .work .projectDiv:last-of-type {
+        margin-top: 0vw; } }
+
+.work .projectAnchor {
+  color: white;
+  font-family: 'Megrim', serif;
+  font-size: 7.5vw;
+  font-weight: 600;
+  letter-spacing: 0.9vw;
+  line-height: 99vw;
+  margin: 0rem;
+  background: #000;
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+  opacity: 0.4;
+  width: 100%;
+  text-shadow: 0.1vw 0.1vw 0.5vw #fff307;
+  text-transform: uppercase; }
+  @media screen and (min-width: 500px) {
+    .work .projectAnchor {
+      line-height: 32.21vw;
+      font-size: 3vw; } }
+
+.work .space {
+  background: url(/assets/spaceinvaders.jpg);
+  position: relative; }
+  .work .space::after {
+    background: url(/assets/spacecode.png);
+    bottom: 0;
+    content: "";
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    transition: opacity ease 500ms;
+    z-index: 1; }
+  .work .space:hover::after {
+    opacity: 1;
+    transition: opacity ease 500ms; }
+
+.work .snail {
+  background: url(/assets/snailephant.jpg);
+  position: relative; }
+  .work .snail::after {
+    background: url(/assets/snailcode.png);
+    bottom: 0;
+    content: "";
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    transition: opacity ease 500ms;
+    z-index: 1; }
+  .work .snail:hover::after {
+    opacity: 1;
+    transition: opacity ease 500ms; }
 
 nav {
   max-width: 100%;
@@ -574,5 +660,12 @@ a:hover > .linkContent {
   transition: opacity ease 500ms; }
 
 .pdf {
-  height: 70.5vmin;
-  width: 63vmin; }
+  border: none;
+  box-shadow: 0vw 0vw 9vw 3vw rgba(0, 0, 0, 0.37);
+  height: 96.8vmin;
+  left: 50%;
+  margin-left: -37.4vmin;
+  margin-top: -48.4vmin;
+  position: fixed;
+  top: 50%;
+  width: 74.8vmin; }
