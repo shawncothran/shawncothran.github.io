@@ -528,12 +528,12 @@ h1 {
   margin-right: 2.35765%;
   width: 100%;
   border: 0.2rem solid #05b698;
+  font-size: 0vw;
   height: 100vw;
+  position: relative;
   text-align: center; }
   .work .projectDiv:last-child {
     margin-right: 0; }
-  .work .projectDiv:nth-of-type(1n+1) {
-    margin-top: 7vw; }
   @media screen and (min-width: 800px) {
     .work .projectDiv {
       float: left;
@@ -549,31 +549,67 @@ h1 {
         clear: left; }
       .work .projectDiv:nth-of-type(1n+3) {
         margin-top: 2vw; } }
+  .work .projectDiv:nth-of-type(1n+1) {
+    margin-top: 7vw; }
+
+.work .projectParagraph {
+  bottom: 0px;
+  color: white;
+  font-size: 1.9rem;
+  margin: 0rem;
+  position: absolute;
+  text-shadow: 0.1vw 0.1vw 0.5vw #fff307;
+  z-index: 1; }
 
 .work .projectAnchor {
   color: white;
   font-family: 'Megrim', serif;
   font-size: 7.5vw;
   font-weight: 600;
+  left: 0;
   letter-spacing: 0.9vw;
-  line-height: 99vw;
+  line-height: 15vw;
   margin: 0rem;
-  background: #000;
   overflow: hidden;
-  position: relative;
-  z-index: 3;
-  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  z-index: 5;
   width: 100%;
   text-shadow: 0.1vw 0.1vw 0.5vw #fff307;
   text-transform: uppercase; }
   @media screen and (min-width: 800px) {
     .work .projectAnchor {
-      line-height: 32.21vw;
-      font-size: 3vw; } }
+      line-height: 4vw;
+      font-size: 3vw;
+      padding-bottom: 12vw; } }
+
+.work .projectAnchorSub {
+  color: white;
+  font-family: 'Megrim', serif;
+  font-size: 7.5vw;
+  font-weight: 600;
+  left: 0;
+  letter-spacing: 0.9vw;
+  line-height: 49.75vw;
+  margin: 0rem;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  width: 100%;
+  text-shadow: 0.1vw 0.1vw 0.5vw #fff307;
+  text-transform: uppercase; }
+  @media screen and (min-width: 800px) {
+    .work .projectAnchorSub {
+      line-height: 4vw;
+      font-size: 3vw;
+      padding-bottom: 12vw; } }
 
 .work .space {
-  background: url(/assets/spaceinvaders.jpg) no-repeat center center;
-  background-size: cover;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/assets/spaceinvaders.jpg);
+  background-position: left, center center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
   position: relative; }
   .work .space::after {
     background: url(/assets/spacecode.png) no-repeat;
@@ -586,14 +622,16 @@ h1 {
     right: 0;
     position: absolute;
     transition: opacity ease 500ms;
-    z-index: 1; }
+    z-index: 0; }
   .work .space:hover::after {
     opacity: 1;
     transition: opacity ease 500ms; }
 
 .work .snail {
-  background: url(/assets/snailephant.jpg) no-repeat center center;
-  background-size: cover;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/assets/snailephant.jpg);
+  background-position: left, center center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
   position: relative; }
   .work .snail::after {
     background: url(/assets/snailcode.png) no-repeat;
@@ -606,14 +644,16 @@ h1 {
     right: 0;
     position: absolute;
     transition: opacity ease 500ms;
-    z-index: 1; }
+    z-index: 0; }
   .work .snail:hover::after {
     opacity: 1;
     transition: opacity ease 500ms; }
 
 .work .calc {
-  background: url(/assets/calculator.gif) no-repeat center center;
-  background-size: cover;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/assets/calculator.gif);
+  background-position: left, center center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
   position: relative; }
   .work .calc::after {
     background: url(/assets/calccode.png) no-repeat;
@@ -626,14 +666,16 @@ h1 {
     right: 0;
     position: absolute;
     transition: opacity ease 500ms;
-    z-index: 1; }
+    z-index: 0; }
   .work .calc:hover::after {
     opacity: 1;
     transition: opacity ease 500ms; }
 
 .work .skate {
-  background: url(/assets/powellperalta.jpg) no-repeat center center;
-  background-size: cover;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/assets/powellperalta.jpg);
+  background-position: left, center center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
   position: relative; }
   .work .skate::after {
     background: url(/assets/skatecode.png) no-repeat;
@@ -646,7 +688,7 @@ h1 {
     right: 0;
     position: absolute;
     transition: opacity ease 500ms;
-    z-index: 1; }
+    z-index: 0; }
   .work .skate:hover::after {
     opacity: 1;
     transition: opacity ease 500ms; }
