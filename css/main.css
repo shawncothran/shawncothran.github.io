@@ -543,10 +543,8 @@ h1 {
       height: 32.4vw; }
       .work .projectDiv:last-child {
         margin-right: 0; }
-      .work .projectDiv:nth-child(3n) {
+      .work .projectDiv:nth-child(odd) {
         margin-right: 0; }
-      .work .projectDiv:nth-child(3n+1) {
-        clear: left; }
       .work .projectDiv:nth-of-type(1n+3) {
         margin-top: 2vw; } }
   .work .projectDiv:nth-of-type(1n+1) {
@@ -561,7 +559,7 @@ h1 {
   text-shadow: 0.1vw 0.1vw 0.5vw #fff307;
   z-index: 1; }
 
-.work .projectAnchor {
+.work a {
   color: white;
   font-family: 'Megrim', serif;
   font-size: 7.5vw;
@@ -572,38 +570,50 @@ h1 {
   margin: 0rem;
   overflow: hidden;
   position: absolute;
-  top: 0;
-  z-index: 5;
-  width: 100%;
   text-shadow: 0.1vw 0.1vw 0.5vw #fff307;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  width: 100%;
+  z-index: 5; }
   @media screen and (min-width: 800px) {
-    .work .projectAnchor {
+    .work a {
       line-height: 4vw;
-      font-size: 3vw;
+      font-size: 3vw; } }
+  .work a:hover {
+    background: rgba(0, 0, 0, 0.4); }
+
+.work .aPrime {
+  top: 0; }
+  @media screen and (min-width: 800px) {
+    .work .aPrime {
+      padding-bottom: 8.5vw; } }
+
+.work .aSub {
+  bottom: 0; }
+  @media screen and (min-width: 800px) {
+    .work .aSub {
       padding-bottom: 12vw; } }
 
-.work .projectAnchorSub {
-  color: white;
-  font-family: 'Megrim', serif;
-  font-size: 7.5vw;
-  font-weight: 600;
-  left: 0;
-  letter-spacing: 0.9vw;
-  line-height: 49.75vw;
-  margin: 0rem;
-  overflow: hidden;
-  position: absolute;
-  bottom: 0;
-  z-index: 3;
-  width: 100%;
-  text-shadow: 0.1vw 0.1vw 0.5vw #fff307;
-  text-transform: uppercase; }
-  @media screen and (min-width: 800px) {
-    .work .projectAnchorSub {
-      line-height: 4vw;
-      font-size: 3vw;
-      padding-bottom: 12vw; } }
+.work .slide {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/assets/tabslide.png);
+  background-position: left, center center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  position: relative; }
+  .work .slide::after {
+    background: url(/assets/tabcode.jpg) no-repeat;
+    background-size: 200%;
+    bottom: 0;
+    content: "";
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    transition: opacity ease 500ms;
+    z-index: 0; }
+  .work .slide:hover::after {
+    opacity: 1;
+    transition: opacity ease 500ms; }
 
 .work .space {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/assets/spaceinvaders.jpg);
@@ -612,7 +622,7 @@ h1 {
   background-size: cover, cover;
   position: relative; }
   .work .space::after {
-    background: url(/assets/spacecode.png) no-repeat;
+    background: url(/assets/spacecode.jpg) no-repeat;
     background-size: 200%;
     bottom: 0;
     content: "";
@@ -634,7 +644,7 @@ h1 {
   background-size: cover, cover;
   position: relative; }
   .work .snail::after {
-    background: url(/assets/snailcode.png) no-repeat;
+    background: url(/assets/snailcode.jpg) no-repeat;
     background-size: 200%;
     bottom: 0;
     content: "";
@@ -656,7 +666,7 @@ h1 {
   background-size: cover, cover;
   position: relative; }
   .work .calc::after {
-    background: url(/assets/calccode.png) no-repeat;
+    background: url(/assets/calccode.jpg) no-repeat;
     background-size: 200%;
     bottom: 0;
     content: "";
@@ -678,7 +688,7 @@ h1 {
   background-size: cover, cover;
   position: relative; }
   .work .skate::after {
-    background: url(/assets/skatecode.png) no-repeat;
+    background: url(/assets/skatecode.jpg) no-repeat;
     background-size: 200%;
     bottom: 0;
     content: "";
